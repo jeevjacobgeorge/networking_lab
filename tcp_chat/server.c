@@ -8,7 +8,7 @@ void main(){
 
       int port = 6969;
       char*ip = "127.0.0.1";
-      struct sockaddr_in sa,ca;
+      struct sockaddr_in sa;
 
       int sockfd = socket(AF_INET,SOCK_STREAM,0);
       if (sockfd == -1){
@@ -31,6 +31,7 @@ void main(){
 
       while(1){
             socklen_t size;
+            struct sockaddr_in ca; //not used for function sake 
             int cl_sockfd = accept(sockfd,(struct sockaddr*)&ca,&size);
             if (cl_sockfd == -1){
                   printf("accept error");
