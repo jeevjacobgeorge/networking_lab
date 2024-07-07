@@ -3,7 +3,7 @@
 #include <unistd.h>
 #include <arpa/inet.h>
 #include <stdlib.h>
-#include <ctype.h>
+#include <ctype.h>// for toupper()
 
 void main(){
       int port = 6969;
